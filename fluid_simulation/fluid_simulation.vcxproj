@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common_utils.h" />
+    <ClInclude Include="constants.h" />
+    <ClInclude Include="geometry\bounding_box.h" />
+    <ClInclude Include="geometry\bounding_box3.h" />
+    <ClInclude Include="geometry\box3.h" />
+    <ClInclude Include="geometry\bvh3.h" />
+    <ClInclude Include="geometry\cylinder3.h" />
+    <ClInclude Include="geometry\cylinder_mesh.h" />
+    <ClInclude Include="geometry\implicit_surface3.h" />
+    <ClInclude Include="geometry\implicit_surface_set3.h" />
+    <ClInclude Include="geometry\intersection_query_engine3.h" />
+    <ClInclude Include="geometry\level_set_utils.h" />
+    <ClInclude Include="geometry\nearest_neighbor_query_engine3.h" />
+    <ClInclude Include="geometry\plane3.h" />
+    <ClInclude Include="geometry\ray.h" />
+    <ClInclude Include="geometry\ray3.h" />
+    <ClInclude Include="geometry\sphere_mesh.h" />
+    <ClInclude Include="geometry\surface3.h" />
+    <ClInclude Include="geometry\surface_to_implicit3.h" />
+    <ClInclude Include="geometry\transform3.h" />
+    <ClInclude Include="render\camera.h" />
+    <ClInclude Include="render\shader.h" />
+    <ClInclude Include="simulation\animation.h" />
+    <ClInclude Include="simulation\bcc_lattice_point_generator.h" />
+    <ClInclude Include="simulation\collider3.h" />
+    <ClInclude Include="simulation\constant_vector_field3.h" />
+    <ClInclude Include="simulation\field3.h" />
+    <ClInclude Include="simulation\particle_emitter3.h" />
+    <ClInclude Include="simulation\particle_system_data3.h" />
+    <ClInclude Include="simulation\particle_system_solver3.h" />
+    <ClInclude Include="simulation\pcisph_solver3.h" />
+    <ClInclude Include="simulation\physics_animation.h" />
+    <ClInclude Include="simulation\point_generator3.h" />
+    <ClInclude Include="simulation\point_hash_grid_searcher3.h" />
+    <ClInclude Include="simulation\point_neighbor_searcher3.h" />
+    <ClInclude Include="simulation\rigid_body_collider3.h" />
+    <ClInclude Include="simulation\sph_kernels3.h" />
+    <ClInclude Include="simulation\sph_solver3.h" />
+    <ClInclude Include="simulation\sph_system_data3.h" />
+    <ClInclude Include="simulation\vector_field3.h" />
+    <ClInclude Include="simulation\volume_particle_emitter3.h" />
+    <ClInclude Include="sph_demo.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\opengl\src\glad.c" />
+    <ClCompile Include="camera.cpp" />
+    <ClCompile Include="geometry\box3.cpp" />
+    <ClCompile Include="geometry\cylinder3.cpp" />
+    <ClCompile Include="geometry\implicit_surface3.cpp" />
+    <ClCompile Include="geometry\implicit_surface_set3.cpp" />
+    <ClCompile Include="geometry\plane3.cpp" />
+    <ClCompile Include="geometry\surface3.cpp" />
+    <ClCompile Include="geometry\surface_to_implicit3.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="simulation\animation.cpp" />
+    <ClCompile Include="simulation\bcc_lattice_point_generator.cpp" />
+    <ClCompile Include="simulation\collider3.cpp" />
+    <ClCompile Include="simulation\constant_vector_field3.cpp" />
+    <ClCompile Include="simulation\field3.cpp" />
+    <ClCompile Include="simulation\particle_emitter3.cpp" />
+    <ClCompile Include="simulation\particle_system_data3.cpp" />
+    <ClCompile Include="simulation\particle_system_solver3.cpp" />
+    <ClCompile Include="simulation\pcisph_solver3.cpp" />
+    <ClCompile Include="simulation\physics_animation.cpp" />
+    <ClCompile Include="simulation\point_generator3.cpp" />
+    <ClCompile Include="simulation\point_hash_grid_searcher3.cpp" />
+    <ClCompile Include="simulation\point_neighbor_searcher3.cpp" />
+    <ClCompile Include="simulation\rigid_body_collider3.cpp" />
+    <ClCompile Include="simulation\sph_kernels3.cpp" />
+    <ClCompile Include="simulation\sph_solver3.cpp" />
+    <ClCompile Include="simulation\sph_system_data3.cpp" />
+    <ClCompile Include="simulation\vector_field3.cpp" />
+    <ClCompile Include="simulation\volume_particle_emitter3.cpp" />
+    <ClCompile Include="sph_demo.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{16a3ecb2-ab76-4ec3-b1d1-5e6a0b2d2784}</ProjectGuid>
+    <RootNamespace>fluidsimulation</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\oneapi-tbb-2021.5.0\include;D:\vs2019_projects\fluid_simulation\fluid_simulation\render;D:\vs2019_projects\fluid_simulation\fluid_simulation\geometry;D:\vs2019_projects\fluid_simulation\fluid_simulation\simulation;D:\opengl\include\glm;D:\opengl\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>D:\oneapi-tbb-2021.5.0\redist\ia32\vc14;D:\oneapi-tbb-2021.5.0\lib\ia32\vc14;D:\opengl\libs;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>D:\vs2019_projects\fluid_simulation\fluid_simulation\render;D:\vs2019_projects\fluid_simulation\fluid_simulation\geometry;D:\vs2019_projects\fluid_simulation\fluid_simulation\simulation;D:\opengl\include\glm;D:\opengl\include;D:\oneapi-tbb-2021.5.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\opengl\libs;D:\oneapi-tbb-2021.5.0\lib\ia32\vc14;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\opengl\include\glm;D:\opengl\include;D:\oneapi-tbb-2021.5.0\include\tbb;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\opengl\libs;D:\oneapi-tbb-2021.5.0\lib\intel64\vc14;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>D:\opengl\include\glm;D:\opengl\include;D:\vs2019_projects\fluid_simulation\fluid_simulation\simulation;D:\vs2019_projects\fluid_simulation\fluid_simulation\geometry;D:\vs2019_projects\fluid_simulation\fluid_simulation\render;D:\oneapi-tbb-2021.5.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\opengl\libs;D:\oneapi-tbb-2021.5.0\lib\intel64\vc14;D:\oneapi-tbb-2021.5.0\lib\ia32\vc14;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\oneapi-tbb-2021.5.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\oneapi-tbb-2021.5.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>D:\oneapi-tbb-2021.5.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\oneapi-tbb-2021.5.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
