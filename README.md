@@ -3,4 +3,5 @@
 
 
 # 运行结果
+粒子数6480，场景为上述教程中的dam-breaking
 ![image](https://github.com/tlcui/fluid_simulation/blob/master/simulation_result.gif)
